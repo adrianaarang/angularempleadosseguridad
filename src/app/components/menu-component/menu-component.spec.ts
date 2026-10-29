@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { ViewPefilComponent } from './view-pefil-component';
+import { MenuComponent } from './menu-component';
 
-describe('ViewPefilComponent', () => {
-  let component: ViewPefilComponent;
-  let fixture: ComponentFixture<ViewPefilComponent>;
+describe('MenuComponent', () => {
+  let component: MenuComponent;
+  let fixture: ComponentFixture<MenuComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ViewPefilComponent],
+      declarations: [MenuComponent],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(ViewPefilComponent);
+    fixture = TestBed.createComponent(MenuComponent);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });

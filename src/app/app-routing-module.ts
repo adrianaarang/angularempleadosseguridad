@@ -1,16 +1,17 @@
-
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ViewSubordinadosComponent } from './components/view-subordinados-component/view-subordinados-component';
-import { ViewPefilComponent } from './components/view-pefil-component/view-pefil-component';
+import { HomeComponent } from './components/home-component/home-component';
 import { LoginComponent } from './components/login-component/login-component';
+import { SubordinadosComponent } from './components/subordinados-component/subordinados-component';
+import { PerfilComponent } from './components/perfil-component/perfil-component';
+import { AuthGuard } from './guards/auth-guard';
 
 const routes: Routes = [
-  { path: 'login', component: LoginComponent },
-  { path: 'profile', component: ViewPefilComponent },
-  { path: 'subordinates', component: ViewSubordinadosComponent },
+  {path: "", component: HomeComponent},
+  {path: "login", component: LoginComponent},
+  {path: "perfil", component: PerfilComponent, canActivate: [AuthGuard]},
+  {path: "subordinados", component: SubordinadosComponent, canActivate: [AuthGuard]},
 ];
-
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
