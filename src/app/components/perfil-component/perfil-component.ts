@@ -19,11 +19,13 @@ export class PerfilComponent implements OnInit {
   ){}
 
   async ngOnInit(): Promise<void> {
-    if (sessionStorage.getItem("TOKEN") ==null ){
-      this._router.navigate(["/login"]);
-    }else{
-      this.empleado = await this._service.getPerfilEmpleadoAsync();
+    this.empleado = await this._service.getPerfilEmpleadoAsync();
     this._cdr.detectChanges();
-    }
+    //if (sessionStorage.getItem("TOKEN") ==null ){
+    //  this._router.navigate(["/login"]);
+    //}else{
+     // this.empleado = await this._service.getPerfilEmpleadoAsync();
+    //this._cdr.detectChanges();
+    //}
   }
 }
