@@ -9,8 +9,15 @@ import { AuthGuard } from './guards/auth-guard';
 const routes: Routes = [
   {path: "", component: HomeComponent},
   {path: "login", component: LoginComponent},
-  {path: "perfil", component: PerfilComponent, canActivate: [AuthGuard]},
-  {path: "subordinados", component: SubordinadosComponent, canActivate: [AuthGuard]},
+  {
+    path: "perfil",
+    component: PerfilComponent,
+    canActivate: [AuthGuard]
+  },
+  {path: "subordinados",
+     component: SubordinadosComponent,
+     canActivate: [AuthGuard]
+    },
 ];
 
 @NgModule({
